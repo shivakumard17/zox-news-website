@@ -18,7 +18,7 @@ function Technology() {
     }, [])
     return (
         <Box>
-          {articles?<Error/>:<Card>
+          {articles?<Card>
 
 {articles.map(article => {
     return(
@@ -32,7 +32,7 @@ function Technology() {
         />
     )
 })}
-</Card>}</Box>
+</Card>:<Error/>}</Box>
     )
 }
 
