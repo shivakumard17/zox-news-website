@@ -13,6 +13,7 @@ import Health from './pages/Health'
 import Science from './pages/Science'
 import Sports from './pages/Sports'
 import Technology from './pages/Technology'
+import Error from './pages/Error';
 
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
       <Route path="/science" element={<Science />} />
       <Route path="/sports" element={<Sports/>} />
       <Route path="/technology" element={<Technology />} />
-      <Route path="*" element={<Technology />} />
+      <Route path="*" element={<Error />} />
     </Routes>
   </BrowserRouter>
   );

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import NewsCard from '../Components/Cards/NesCard';
 import { Card,Box} from './styles';
+import Error from './Error';
 
 function Bussiness() {
   const [articles, setArticles] = useState([])
@@ -17,20 +18,21 @@ function Bussiness() {
     }, [])
     return (
         <Box>
-        <Card>
-            {articles.map(article => {
-                return(
-                    <NewsCard 
-                    title={article.title}
-                   
-                    url={article.url}
-                    urlToImage={article.urlToImage} 
-                    name={article.source.name}
-                    publishedAt={article.publishedAt}
-                    />
-                )
-            })}
-        </Card></Box>
+          {articles?<Card>
+
+{articles.map(article => {
+    return(
+        <NewsCard 
+        title={article.title}
+       
+        url={article.url}
+        urlToImage={article.urlToImage} 
+        name={article.source.name}
+        publishedAt={article.publishedAt}
+        />
+    )
+})}
+</Card>:<Error/>}</Box>
     )
 }
 

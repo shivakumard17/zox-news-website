@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import NewsCard from '../Components/Cards/NesCard';
-import { Card,Search_box,Box } from './styles';
-import {FaSearch} from 'react-icons/fa'
+import { Card,Box } from './styles';
+import Error from './Error';
+
 
 function All() {
   const [articles, setArticles] = useState([])
@@ -19,10 +20,8 @@ function All() {
     }, [])
     return (
         <Box> 
-            
-        <Card>
+            {articles?<Card>
 
-             
             {articles.map(article => {
                 return(
                     <NewsCard 
@@ -35,7 +34,9 @@ function All() {
                     />
                 )
             })}
-        </Card></Box>
+        </Card>:<Error/>}
+        
+        </Box>
     )
 }
 

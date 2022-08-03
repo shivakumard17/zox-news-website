@@ -30,6 +30,23 @@ margin-top: 150px;
   }
 
 `
+export const ErrorBox=styled.div`
+height: 100%;
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 5px;
+`
+export const ErrorImg=styled.img`
+height: 150px;
+width:300px;
+margin-top: 25px;
+`
+export const ErrorMess=styled.h3`
+color: #797b8f;
+`
 
 
 
