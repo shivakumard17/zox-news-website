@@ -9,7 +9,7 @@ function Science() {
 
     useEffect(() => {
         const getArticles = async () => {
-            const response = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&category=science&apiKey=f0d1eff0cd78421eb8f6223510e8ee56`)
+            const response = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&category=science&apiKey=004551c8b9734e6992841149e222c96a`)
             setArticles(response.data.articles);
             console.log(response);
         }
